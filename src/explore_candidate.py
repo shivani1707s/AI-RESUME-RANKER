@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 
-from src.config import CANDIDATES_FILE
+from src.utils.config import CANDIDATES_FILE
 
 
 def main():

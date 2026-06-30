@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.config import CANDIDATES_FILE, OUTPUT_DIR
+from src.utils.config import CANDIDATES_FILE, OUTPUT_DIR
 
 
 def extract_candidate(record):
@@ -83,15 +83,22 @@ def extract_candidate(record):
             signals.get("open_to_work_flag", False)
     }
 
-
-def main():
-
+def load_candidates():
+    """
+    Load the candidates dataset.
+    """
     print("Loading candidates...")
 
     df = pd.read_json(
         CANDIDATES_FILE,
         lines=True
     )
+
+    return df
+
+def main():
+
+    df = load_candidates()
 
     print("Processing...")
 

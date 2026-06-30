@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.config import CANDIDATES_FILE
+from utils.config import CANDIDATES_FILE
 
 
 def load_candidates():
